@@ -1,0 +1,82 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: salmon;
+}
+
+main>div{
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+}
+
+#mesas{
+  width: 50%;
+  height: 50%;
+  left: 0;
+  top: 0;
+  display: grid;
+  grid-template-rows: repeat(5, 20%);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  background-color: green;
+}
+
+#mesas>div{
+  font-size: .5rem;
+  overflow-wrap: break-word;
+}
+
+#mesas>div:first-child{
+  font-size:1.2rem;
+  grid-area: 1/1/span 1/span 4;
+}
+
+#selectedTable{
+  display: none;
+  grid-gap: 5px;
+  grid-template-rows: repeat(3, minmax(0,1fr));
+  background-color: orange;
+  justify-items: center;
+  align-items: center;
+}
+
+#selectedTable>div:first-child{
+  font-size: rem;
+  background-color: whitesmoke;
+}
+
+#selectedTable>div:nth-child(2){
+  font-size: 2.5rem;
+  background-color: whitesmoke;
+}
+
+#selectedTable>div:last-child{
+  background-color: whitesmoke;
+}
+
+#productos{
+  left: 0;
+  bottom: 0;
+  background-color: red;
+}
+
+#cuenta{
+  right: 0;
+  top: 0;
+  background-color: yellowgreen;
+}
+
+#pago{
+  right: 0;
+  bottom: 0;
+  background-color: blueviolet;
+}
+
